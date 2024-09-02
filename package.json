@@ -1,0 +1,19 @@
+{
+	"name": "react-cra-mf",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"dev": "lerna run start --stream --parallel",
+		"prod": "lerna run preview --stream --parallel",
+		"dev-prod": "lerna run start --scope=host-app --stream & lerna run preview --scope=remote-app --stream"
+	},
+	"devDependencies": {
+		"lerna": "^8.1.8"
+	},
+	"overrides": {
+		"postcss": "^8.4.31",
+		"nth-check": "^2.0.1"
+	}
+}
